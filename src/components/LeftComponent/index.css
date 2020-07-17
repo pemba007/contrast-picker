@@ -1,0 +1,12 @@
+.left-container {
+  background-color: #f5eded;
+  flex: 0.618;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 425px) {
+  .left-container {
+    overflow: unset;
+  }
+}
