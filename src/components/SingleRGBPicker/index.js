@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
-import Input from "@material-ui/core/Input";
+// import Input from "@material-ui/core/Input";
 import TextField from "@material-ui/core/TextField";
 
 const PrettoSlider = withStyles({
