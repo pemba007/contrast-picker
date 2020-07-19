@@ -3,9 +3,13 @@ import React from "react";
 export const ColorContext = React.createContext("light");
 
 const ColorProvider = (props) => {
-  const [frontColor, setFrontColor] = React.useState("#000");
+  const [frontColor, setFrontColor] = React.useState({
+    r: 255,
+    g: 255,
+    b: 255,
+  });
 
-  const [backColor, setBackColor] = React.useState("#fff");
+  const [backColor, setBackColor] = React.useState({ r: 0, g: 0, b: 0 });
 
   return (
     <ColorContext.Provider

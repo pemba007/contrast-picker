@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
+import SingleRGBPicker from "../SingleRGBPicker";
+import "./index.css";
+
+import ColorGenerated from "../ColorGenerated";
 
 const SingleColorSelector = (props) => {
+  const [red, setRed] = useState(props.default.r);
+  const [green, setGreen] = useState(props.default.g);
+  const [blue, setBlue] = useState(props.default.b);
+
+  const _redChange = (number) => {
+    onChange(number, green, blue);
+    setRed(number);
+  };
+
+  const _greenChange = (number) => {
+    onChange(red, number, blue);
+    setGreen(number);
+  };
+
+  const _blueChange = (number) => {
+    onChange(red, green, number);
+    setBlue(number);
+  };
+
+  const onChange = (r, g, b) => {
+    props.onChange(r, g, b);
+  };
+
   return (
-    <div className='full-flex center-text'>
+    <div className='color-picker-container full-flex center-text'>
       <Typography variant='h5' component='h2' align='center' gutterBottom>
         {props.title}
       </Typography>
+      <SingleRGBPicker value={red} onChange={_redChange} />
+      <SingleRGBPicker value={green} onChange={_greenChange} />
+      <SingleRGBPicker value={blue} onChange={_blueChange} />
+
+      <ColorGenerated red={red} green={green} blue={blue} />
     </div>
   );
 };
