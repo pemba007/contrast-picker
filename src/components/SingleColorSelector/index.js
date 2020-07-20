@@ -34,9 +34,9 @@ const SingleColorSelector = (props) => {
       <Typography variant='h5' component='h2' align='center' gutterBottom>
         {props.title}
       </Typography>
-      <SingleRGBPicker value={red} onChange={_redChange} />
-      <SingleRGBPicker value={green} onChange={_greenChange} />
-      <SingleRGBPicker value={blue} onChange={_blueChange} />
+      <SingleRGBPicker value={red} onChange={_redChange} color='#b71c1c' />
+      <SingleRGBPicker value={green} onChange={_greenChange} color='#4caf50' />
+      <SingleRGBPicker value={blue} onChange={_blueChange} color='#0d47a1' />
 
       <ColorGenerated red={red} green={green} blue={blue} />
     </div>

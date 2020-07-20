@@ -1,12 +1,13 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
-// import Input from "@material-ui/core/Input";
+
 import TextField from "@material-ui/core/TextField";
+import "./index.css";
 
 const PrettoSlider = withStyles({
   root: {
-    color: "#52af77",
+    // color: "#52af77",
     height: 8,
     "& .MuiSlider-rail": {
       backgroundColor: "#fff",
@@ -75,7 +76,7 @@ const SingleRGBPicker = (props) => {
         marginBottom: "1rem",
       }}
     >
-      <div style={{ width: "60%" }}>
+      <div className='single-color-left'>
         <PrettoSlider
           valueLabelDisplay='auto'
           aria-label='pretto slider'
@@ -83,9 +84,12 @@ const SingleRGBPicker = (props) => {
           onChange={(data, number) => props.onChange(number)}
           min={0}
           max={255}
+          style={{
+            color: props.color,
+          }}
         />
       </div>
-      <div style={{ width: "20%" }}>
+      <div className='single-color-right'>
         <CssTextField
           id='outlined-name'
           size='small'

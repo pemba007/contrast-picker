@@ -1,0 +1,16 @@
+.single-color-right {
+  width: 20%;
+}
+
+.single-color-left {
+  width: 60%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .single-color-right {
+    width: 25%;
+  }
+  .single-color-left {
+    width: 55%;
+  }
+}

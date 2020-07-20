@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .App {
   display: flex;
   flex: 0 1 1500px;
@@ -22,7 +26,10 @@
   color: #f5eded;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
+  .MuiTypography-h3 {
+    font-size: 2rem !important;
+  }
   .mob-full-width {
     flex: 1;
   }
