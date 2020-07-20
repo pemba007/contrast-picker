@@ -1,0 +1,17 @@
+.result {
+  width: 80%;
+}
+
+.MuiCard-root {
+  width: 40%;
+}
+
+.result-grp {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 500px) {
+}

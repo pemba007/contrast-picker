@@ -15,7 +15,7 @@ const Blob = (props) => {
           y='50%'
           dominantBaseline='middle'
           textAnchor='middle'
-          font-family='Roboto, Poppins, sans-serif'
+          fontFamily='Roboto, Poppins, sans-serif'
           fill={`rgb(${props.frontColor.r},${props.frontColor.g},${props.frontColor.b})`}
         >
           Inspiration

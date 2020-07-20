@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import Typography from "@material-ui/core/Typography";
 import ColorSelector from "../ColorSelector";
+import ResultDisplay from "../ResultDisplay";
 
 const RightComponent = () => {
   return (
@@ -22,6 +23,7 @@ const RightComponent = () => {
         This is a contrast checker tools
       </Typography>
       <ColorSelector />
+      <ResultDisplay />
     </div>
   );
 };
